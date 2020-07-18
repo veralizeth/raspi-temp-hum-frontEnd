@@ -8,10 +8,13 @@
     "@testing-library/user-event": "^7.1.2",
     "@trendmicro/react-sidenav": "^0.5.0",
     "axios": "^0.19.2",
+    "plotly.js": "^1.54.6",
     "react": "^16.13.1",
     "react-burger-menu": "^2.7.0",
+    "react-datetime-picker": "^3.0.2",
     "react-dom": "^16.13.1",
     "react-parallax": "^3.0.3",
+    "react-plotly.js": "^2.4.0",
     "react-scripts": "3.4.1",
     "react-scroll": "^1.8.0"
   },

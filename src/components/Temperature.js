@@ -7,12 +7,13 @@ const Temperature = () =>{
     <div className='tempe-section' id='about'>
 
       <Parallax strength={350}
-        bgImage={require("../images/testPic.jpg")}
+        bgImage={require("../images/temp.jpg")}
       >
         <div className="tempe-about">
           <p className="tempe-info" >Temperature</p>
         </div>
       </Parallax>
+      
     </div>
   )
 }
