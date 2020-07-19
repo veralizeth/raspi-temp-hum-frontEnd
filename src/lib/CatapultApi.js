@@ -13,7 +13,7 @@ class CatapultApi {
 
     const url = `${this.baseUrl}${deviceEndPoint}`
 
-    return axios.get(url)
+    axios.get(url)
       .then((response) => {
         console.log(response);
         return response.data;
@@ -28,7 +28,7 @@ class CatapultApi {
 
     const url = `${this.baseUrl}${tempeEndPoint}`
 
-    return axios.get(url, {
+    axios.get(url, {
       params: {
         timeStampStart: startDate,
         timeStampEnd: endDate

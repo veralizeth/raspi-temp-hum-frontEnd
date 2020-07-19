@@ -17,35 +17,105 @@ const reformatData = (data) => {
   });
 };
 
-const url = "http://localhost:8080/api"
+// const url = "http://localhost:8080/api"
 
-function App() {
+function App(props) {
+
+
+    // const api = new CatapultApi(url);
+
+  // const getDevices = useCallback(() => {
+
+  //   api.getDevices()
+  //     .then((data) => {
+  //       console.log(data);
+  //       setDeviceList(data);
+  //     })
+  // }, [api]);
+
+  // const getTemperaturebyDates = useCallback(() => {
+  //   api.getTemperaturebyDates('2020-07-17T00:46:59Z', '2020-07-17T00:50:00Z')
+  //     .then((data) => {
+  //       setTemperatureByDateList(data);
+  //     })
+  // }, [api]);
+
+  // useEffect(() => { getTemperaturebyDates();}, [getTemperaturebyDates]);
+  // useEffect(() => { getDevices(); }, [getDevices]);
 
   const [deviceList, setDeviceList] = useState([]);
   const [temperatureByDateList, setTemperatureByDateList] = useState([]);
 
-  const api = new CatapultApi(url);
+  const baseUrl = "http://localhost:8080/api"
+  const devicesEndPoint = `${baseUrl}/devices`
+  const tempEndPoint = `${baseUrl}/temperature`
+  const humEndPoint = `${baseUrl}/humidity`
 
-  const getDevices = useCallback(() => {
+  const reformatData = (data) => {
+    console.log(data)
+    return data.map((element) => {
+      console.log(element);
+      return element;
+    });
+  };
 
-    api.getDevices()
-      .then((data) => {
-        console.log(data);
-        setDeviceList(data);
+  const getDevices = (url) => {
+    axios.get(url)
+      .then((response) => {
+        console.log(response.data);
+        // const formatData = reformatData(response.data)
+        setDeviceList(response.data);
       })
-  }, [api]);
+      .catch((error) => {
+        console.log(error)
+      });
+  };
 
-  const getTemperaturebyDates = useCallback(() => {
 
-    api.getTemperaturebyDates('2020-07-17T00:46:59Z', '2020-07-17T00:50:00Z')
-      .then((data) => {
-        
-        setTemperatureByDateList(data);
+  // const getTemperaturebyDates = (startDate, endDate) => {
+  //   axios.get(tempEndPoint, {
+  //     params: {
+  //       timeStampStart: '2020-07-18T22:49:57Z',
+  //       timeStampEnd: '2020-07-18T22:50:57Z'
+  //     }
+  //   })
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       setTemperatureByDateList(response.data)
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       throw (error);
+  //     });
+  // };
+
+  useEffect(() => { getDevices(devicesEndPoint); }, [devicesEndPoint]);
+  // useEffect(() => { getTemperaturebyDates(tempEndPoint); }, [tempEndPoint]);
+
+  console.log(temperatureByDateList);
+
+  const onSubmitCallback = (startTime, endTime) => {
+
+    console.log(startTime.toISOString());
+    console.log(endTime.toJSON());
+
+    axios.get(tempEndPoint, {
+      params: {
+        timeStampStart: startTime.toJSON(),
+        timeStampEnd:  endTime.toJSON()
+      }
+    })
+      .then((response) => {
+        console.log(response.data);
+        setTemperatureByDateList(response.data)
       })
-  }, [api]);
+      .catch((error) => {
+        console.log(error);
+        throw (error);
+      });
+  }
 
-  useEffect(() => { getTemperaturebyDates(); }, [getTemperaturebyDates]);
-  useEffect(() => { getDevices(); }, [getDevices]);
+  
 
   return (
     <div className="App">
@@ -54,8 +124,8 @@ function App() {
           <SideNav pageWrapId={"page-wrap"} outerContainerId={"App"} />
           <BackgroundVideo/>
           <Home />
-          <Temperature />
-          <Humidity />
+          <Temperature onSubmitCallback={onSubmitCallback} temperature={temperatureByDateList}s/>
+          <Humidity onSubmitCallback={onSubmitCallback} humidity={temperatureByDateList}/>
         </div>
       </header>
     </div>

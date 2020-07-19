@@ -5,14 +5,17 @@ import TimePicker from './TimePicker';
 import './Humidity.css';
 
 const Humidity = (props) =>{
+  console.log(props);
   return (
     <div className='tempe-section' id='about'>
-      <Parallax strength={350}
+      <Parallax strength={380}
         bgImage={require("../images/fog.jpg")}
       >
-        <div className="tempe-about">
+        <div className="search-dates">
           <TimePicker {...props}/>
-          <ReportChart />
+        </div>
+        <div className="tempe-about">
+          <ReportChart {...props}/>
           <p className="tempe-info" >Humidity</p>
         </div>
       </Parallax>

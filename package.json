@@ -16,7 +16,8 @@
     "react-parallax": "^3.0.3",
     "react-plotly.js": "^2.4.0",
     "react-scripts": "3.4.1",
-    "react-scroll": "^1.8.0"
+    "react-scroll": "^1.8.0",
+    "victory": "^35.0.5"
   },
   "scripts": {
     "start": "react-scripts start --no-cache",
