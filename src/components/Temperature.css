@@ -1,19 +1,18 @@
-.tempe-section {
+/* .tempe-section {
     min-height: 100vh;
-}
+} */
 
 .tempe-about{
     height: 100vh;
-    padding-top: 200px;
 }
 
 .tempe-info {
     margin-bottom: 0;
-    font-size: 5rem;
+    font-size: 3rem;
     background-color: #091f36;
     color: white;
-    width: fit-content;
-    margin-left: 4rem;
-    margin-top: 10rem;
+    /* width: fit-content; */
+    margin-left: 2rem;
+    margin-top: 1rem;
     padding: 2rem;
 }

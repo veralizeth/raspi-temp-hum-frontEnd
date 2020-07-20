@@ -11,12 +11,14 @@ const Humidity = (props) =>{
       <Parallax strength={380}
         bgImage={require("../images/fog.jpg")}
       >
-        <div className="search-dates">
-          <TimePicker {...props}/>
-        </div>
-        <div className="tempe-about">
-          <ReportChart {...props}/>
-          <p className="tempe-info" >Humidity</p>
+        <p className="tempe-info" >Humidity</p>
+        <div class="grid-container">
+          <div className="tempe-about">
+            <div className="search-dates">  
+              <TimePicker {...props} />
+              <ReportChart {...props} />
+            </div>
+          </div>
         </div>
       </Parallax>
     </div>

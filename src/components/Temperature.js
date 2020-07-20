@@ -1,7 +1,7 @@
 import React from 'react';
 import { Parallax, Background } from "react-parallax";
-import ReportChart from './ReportChart';
-import TimePicker from './TimePicker';
+import TempChart from './TempChart';
+import TimeTemPicker from './TimeTemPicker';
 import './Temperature.css';
 
 const Temperature = (props) =>{
@@ -16,12 +16,12 @@ const Temperature = (props) =>{
       <Parallax strength={350}
         bgImage={require("../images/temp.jpg")}
       >
+        <p className="tempe-info" >Temperature</p>
         <div className="search-dates">
-          <TimePicker {...props} />
+          <TimeTemPicker {...props} />
         </div>
         <div className="tempe-about">
-  
-          <p className="tempe-info" >Temperature</p>
+          <TempChart {...props} />
         </div>
       </Parallax>
       

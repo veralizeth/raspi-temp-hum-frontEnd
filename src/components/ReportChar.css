@@ -16,3 +16,14 @@
   width: 70%;
   padding: 10px;
 } 
+
+.svg-container{
+  /* background-color: lightblue !important; */
+  background-color:rgba(9, 32, 54, 0.5) !important;
+ 
+}
+
+.main-svg {
+  background-color:  transparent !important;
+   color: bisque !important;
+}

@@ -45,6 +45,7 @@ function App(props) {
 
   const [deviceList, setDeviceList] = useState([]);
   const [temperatureByDateList, setTemperatureByDateList] = useState([]);
+  const [humidityByDateList, sethumidityByDateList] = useState([]);
 
   const baseUrl = "http://localhost:8080/api"
   const devicesEndPoint = `${baseUrl}/devices`
@@ -94,7 +95,29 @@ function App(props) {
 
   console.log(temperatureByDateList);
 
-  const onSubmitCallback = (startTime, endTime) => {
+  const onSubmitHumCallback = (startTime, endTime) => {
+
+    console.log(startTime.toISOString());
+    console.log(endTime.toJSON());
+
+    axios.get(humEndPoint, {
+      params: {
+        timeStampStart: startTime.toJSON(),
+        timeStampEnd:  endTime.toJSON()
+      }
+    })
+      .then((response) => {
+        console.log(response.data);
+        sethumidityByDateList(response.data)
+      })
+      .catch((error) => {
+        console.log(error);
+        throw (error);
+      });
+  }
+
+
+  const onSubmitTemCallback = (startTime, endTime) => {
 
     console.log(startTime.toISOString());
     console.log(endTime.toJSON());
@@ -102,7 +125,7 @@ function App(props) {
     axios.get(tempEndPoint, {
       params: {
         timeStampStart: startTime.toJSON(),
-        timeStampEnd:  endTime.toJSON()
+        timeStampEnd: endTime.toJSON()
       }
     })
       .then((response) => {
@@ -114,7 +137,6 @@ function App(props) {
         throw (error);
       });
   }
-
   
 
   return (
@@ -123,9 +145,9 @@ function App(props) {
         <div className='App-body'>
           <SideNav pageWrapId={"page-wrap"} outerContainerId={"App"} />
           <BackgroundVideo/>
-          <Home />
-          <Temperature onSubmitCallback={onSubmitCallback} temperature={temperatureByDateList}s/>
-          <Humidity onSubmitCallback={onSubmitCallback} humidity={temperatureByDateList}/>
+          {/* <Home /> */}
+          <Temperature onSubmitTemCallback={onSubmitTemCallback} temperature={temperatureByDateList}s/>
+          <Humidity onSubmitHumCallback={onSubmitHumCallback} humidity={humidityByDateList}/>
         </div>
       </header>
     </div>

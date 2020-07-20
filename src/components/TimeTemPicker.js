@@ -3,14 +3,14 @@ import DateTimePicker from 'react-datetime-picker';
 import './TimePicker.css';
 // import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
 
-const TimePicker = (props) => {
+const TimeTemPicker = (props) => {
 
   const [starTime, startOnChange] = useState(new Date());
   const [endTime, endOnChange] = useState(new Date());
 
   const onInputChange = (event) => {
     // event.preventDefault();
-    props.onSubmitHumCallback(starTime, endTime);
+    props.onSubmitTemCallback(starTime, endTime);
   };
 
 
@@ -27,15 +27,15 @@ const TimePicker = (props) => {
         value={endTime}
       />
       <div>
-        <input
-          className="search-btn"
-          type="button"
-          value="Search"
-          onClick={() => onInputChange()}
+        <input 
+          className="search-btn" 
+          type="button" 
+          value="Search" 
+          onClick={() => onInputChange()} 
         />
       </div>
     </div>
   );
 }
 
-export default TimePicker;
+export default TimeTemPicker;

@@ -3,15 +3,15 @@ import Plot from 'react-plotly.js';
 import './ReportChar.css';
 
 
-const ReportChart = (props) => {
+const TempChart = (props) => {
 
   const sliceData = (props) => {
-    const humidityArray = props.humidity
-    if (humidityArray.length > 100) {
-      console.log(humidityArray.slice(Math.max(humidityArray.length - 100, 0)));
-      return humidityArray.slice(Math.max(humidityArray.length - 100, 0));
+    const temperatureArray = props.temperature
+    if (temperatureArray.length > 100) {
+      console.log(temperatureArray.slice(Math.max(temperatureArray.length - 100, 0)));
+      return temperatureArray.slice(Math.max(temperatureArray.length - 100, 0));
     } else {
-      return humidityArray
+      return temperatureArray
     }
   };
 
@@ -40,18 +40,17 @@ const ReportChart = (props) => {
           }]}
 
         layout={{
-          width: 600,
+          width: 600, 
           height: 400,
-          title: 'Humidity',
-          legend: { x: 1, y: 1, traceorder: "normal" },
+          title: 'Temperature',
+          legend: {x: 1, y:1, traceorder: "normal"},
           font: {
             family: 'sans-serif', size: 13, color: 'White'
           },
         }}
-
         
       />
     );
 }
 
-export default ReportChart;
+export default TempChart;
