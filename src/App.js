@@ -1,21 +1,21 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Home from './components/Home';
+// import Home from './components/Home';
 import Temperature from './components/Temperature';
 import SideNav from './components/SideNav';
 import BackgroundVideo from './components/BackgroundVideo';
 import Humidity from './components/Humidity';
-import TempChart from './components/ReportChart';
-import CatapultApi from './lib/CatapultApi';
+// import TempChart from './components/ReportChart';
+// import CatapultApi from './lib/CatapultApi';
 import './App.css';
 
-const reformatData = (data) => {
-  console.log(data)
-  return data.map((element) => {
-    console.log(element);
-    return element;
-  });
-};
+// const reformatData = (data) => {
+//   console.log(data)
+//   return data.map((element) => {
+//     console.log(element);
+//     return element;
+//   });
+// };
 
 // const url = "http://localhost:8080/api"
 
@@ -51,14 +51,6 @@ function App(props) {
   const devicesEndPoint = `${baseUrl}/devices`
   const tempEndPoint = `${baseUrl}/temperature`
   const humEndPoint = `${baseUrl}/humidity`
-
-  const reformatData = (data) => {
-    console.log(data)
-    return data.map((element) => {
-      console.log(element);
-      return element;
-    });
-  };
 
   const getDevices = (url) => {
     axios.get(url)
