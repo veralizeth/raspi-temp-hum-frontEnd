@@ -1,6 +1,6 @@
 .home-section {
     min-height: 100vh;
-    background-color: #091f36;
+    background-color:#091f36;
     vertical-align: center;
     max-width: 80%;
     margin: auto;
@@ -20,13 +20,18 @@
 
 .content-subtitle {
     color: lightsteelblue;
-    font-size: 4rem;
+    font-size: 5rem;
     text-align: center;
 }
 
 .learn {
-    color: #00FFFF !important;
+    color: #ac999f !important;
     font-size: 2rem;
+    font-weight: 800;
+    background-color: #43436b;  
+    padding: 0 15px 0 15px;
+    border-radius: 20px;
+    box-shadow: 0 30px 40px 0 rgba(16, 36, 94, 0.2);
 }
 
 @media only screen and (max-width: 768px) {
@@ -34,11 +39,11 @@
         font-size: 4rem;
     }
     .content-subtitle {
-        font-size: 2rem;
+        font-size: 4rem;
     }
 
     .learn {
-        font-size: 1rem; 
+        font-size: 3rem; 
     }
 }
 

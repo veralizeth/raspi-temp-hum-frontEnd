@@ -36,7 +36,7 @@ const ReportChart = (props) => {
             y: yData,
             type: 'scattergl',
             name: 'temp',
-            marker: { color: "midnightblue" },
+            marker: { color: "turquoise" },
           }]}
 
         layout={{

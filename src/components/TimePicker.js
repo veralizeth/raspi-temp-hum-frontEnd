@@ -16,12 +16,12 @@ const TimePicker = (props) => {
 
   return (
     <div className="time-selector">
-      <p>Start Time</p>
+      <p className="text-time-selector">Start Time</p>
       <DateTimePicker
         onChange={startOnChange}
         value={starTime}
       />
-      <p>End Time</p>
+      <p className="text-time-selector" >End Time</p>
       <DateTimePicker
         onChange={endOnChange}
         value={endTime}

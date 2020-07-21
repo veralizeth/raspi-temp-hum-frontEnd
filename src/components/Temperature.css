@@ -8,12 +8,26 @@
 
 .tempe-info {
     margin-bottom: 0;
-    font-size: 3rem;
-    background-color: #47155a;
+    font-size: 2.6rem;
+    background-color: rgb(170, 214, 210);
     color: white;
+    font-weight: 700;
     /* width: fit-content; */
     margin-left: 2rem;
     margin-top: 1rem;
-    padding: 2rem;
+    padding: 0.2rem;
+    padding-left: 4rem;
     border-radius: 10px;
+}
+
+.link{
+    align-content: center;
+    padding-left: 40px;
+}
+
+.link .learn {
+    font-size: 25px;
+    background-color: lightblue ;
+    color: midnightblue !important;
+    font-weight: 600;
 }

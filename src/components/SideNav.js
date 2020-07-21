@@ -9,11 +9,11 @@ const SideNav = (props) => {
         Home
       </a>
 
-      <a className="menu-item" href="/burgers">
+      <a className="menu-item" href="#temperature">
         Temperature
       </a>
 
-      <a className="menu-item" href="/pizzas">
+      <a className="menu-item" href="#humidity">
         Humidity
       </a>
 
