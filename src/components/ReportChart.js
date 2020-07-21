@@ -24,7 +24,7 @@ const ReportChart = (props) => {
   let xData = shotData.map(element => {
     const ts = new Date(element.timeStamp);
     console.log(ts.toUTCString());
-    return ts.toUTCString();
+    return ts.toLocaleString();
   });
   console.log("ydata")
 
@@ -36,20 +36,28 @@ const ReportChart = (props) => {
             y: yData,
             type: 'scattergl',
             name: 'temp',
-            marker: { color: "red" },
+            marker: { color: "midnightblue" },
           }]}
 
         layout={{
           width: 600,
-          height: 400,
+          height: 500,
           title: props.name,
-          legend: { x: 1, y: 1, traceorder: "normal" },
+          // legend: { x: 1, y: 1 },
           font: {
-            family: 'sans-serif', size: 13, color: 'White'
+            family: 'sans-serif', size: 14, color: 'midnightblue'
           },
         }}
 
-        
+      options={{
+        scales: {
+          xAxes: [{
+            gridLines: {
+              display: false,
+            }
+          }]}
+    }
+}
       />
     );
 }

@@ -9,7 +9,7 @@ const Humidity = (props) =>{
   return (
     <div className='tempe-section' id='about'>
       <Parallax strength={380}
-        bgImage={require("../images/fog.jpg")}
+        bgImage={require("../images/lilac.jpg")}
       >
         <p className="tempe-info" >Humidity</p>
         <div class="grid-container">

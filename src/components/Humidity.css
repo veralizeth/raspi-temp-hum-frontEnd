@@ -17,7 +17,7 @@
     padding: 2rem;
 } */
 
-.grid-container{
+/* .grid-container{
     display: grid;
-    grid-template-columns: auto auto auto;
-}
+    grid-template-columns: 1fr auto auto;
+} */

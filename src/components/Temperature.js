@@ -13,14 +13,16 @@ const Temperature = (props) =>{
     <div className='tempe-section' id='about'>
 
       <Parallax strength={350}
-        bgImage={require("../images/temp.jpg")}
+        bgImage={require("../images/grad.jpg")}
       >
         <p className="tempe-info" >Temperature</p>
-        <div className="search-dates">
-          <TimePicker {...props} />
-        </div>
-        <div className="tempe-about">
-          <ReportChart {...props} name={"Temperature"}/>
+        <div class="grid-container">
+          <div className="tempe-about">
+            <div className="search-dates">
+              <TimePicker {...props} />
+              <ReportChart {...props} name={"Temperature"} />
+            </div>
+          </div>
         </div>
       </Parallax>
       
