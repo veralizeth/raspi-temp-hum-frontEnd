@@ -47,7 +47,7 @@ function App(props) {
   const [temperatureByDateList, setTemperatureByDateList] = useState([]);
   const [humidityByDateList, sethumidityByDateList] = useState([]);
 
-  const baseUrl = "http://ec2-3-15-31-145.us-east-2.compute.amazonaws.com:8080/api/"
+  const baseUrl = "http://ec2-3-15-31-145.us-east-2.compute.amazonaws.com:8080/api"
   const devicesEndPoint = `${baseUrl}/devices`
   const tempEndPoint = `${baseUrl}/temperature`
   const humEndPoint = `${baseUrl}/humidity`
