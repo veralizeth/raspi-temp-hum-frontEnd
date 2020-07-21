@@ -6,7 +6,7 @@ import './ReportChar.css';
 const ReportChart = (props) => {
 
   const sliceData = (props) => {
-    const humidityArray = props.humidity
+    const humidityArray = props.data
     if (humidityArray.length > 100) {
       console.log(humidityArray.slice(Math.max(humidityArray.length - 100, 0)));
       return humidityArray.slice(Math.max(humidityArray.length - 100, 0));
@@ -42,7 +42,7 @@ const ReportChart = (props) => {
         layout={{
           width: 600,
           height: 400,
-          title: 'Humidity',
+          title: props.name,
           legend: { x: 1, y: 1, traceorder: "normal" },
           font: {
             family: 'sans-serif', size: 13, color: 'White'

@@ -10,7 +10,7 @@ const TimePicker = (props) => {
 
   const onInputChange = (event) => {
     // event.preventDefault();
-    props.onSubmitHumCallback(starTime, endTime);
+    props.onSubmitCallback(starTime, endTime);
   };
 
 

@@ -16,7 +16,7 @@ const Humidity = (props) =>{
           <div className="tempe-about">
             <div className="search-dates">  
               <TimePicker {...props} />
-              <ReportChart {...props} />
+              <ReportChart {...props} name={"Humidity"}/>
             </div>
           </div>
         </div>

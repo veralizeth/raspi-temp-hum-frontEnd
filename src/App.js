@@ -64,7 +64,6 @@ function App(props) {
       });
   };
 
-
   // const getTemperaturebyDates = (startDate, endDate) => {
   //   axios.get(tempEndPoint, {
   //     params: {
@@ -138,8 +137,8 @@ function App(props) {
           <SideNav pageWrapId={"page-wrap"} outerContainerId={"App"} />
           <BackgroundVideo/>
           {/* <Home /> */}
-          <Temperature onSubmitTemCallback={onSubmitTemCallback} temperature={temperatureByDateList}s/>
-          <Humidity onSubmitHumCallback={onSubmitHumCallback} humidity={humidityByDateList}/>
+          <Temperature onSubmitCallback={onSubmitTemCallback} data={temperatureByDateList}/>
+          <Humidity onSubmitCallback={onSubmitHumCallback} data={humidityByDateList}/>
         </div>
       </header>
     </div>

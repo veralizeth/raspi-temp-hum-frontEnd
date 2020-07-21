@@ -1,13 +1,12 @@
 import React from 'react';
 import { Parallax, Background } from "react-parallax";
-import TempChart from './TempChart';
-import TimeTemPicker from './TimeTemPicker';
+import ReportChart from './ReportChart';
+import TimePicker from './TimePicker';
 import './Temperature.css';
 
 const Temperature = (props) =>{
 
-  console.log(props.temperature)
-  const temperatureArray = props.temperature;
+  const temperatureArray = props.data;
   console.log(temperatureArray);
 
   return (
@@ -18,10 +17,10 @@ const Temperature = (props) =>{
       >
         <p className="tempe-info" >Temperature</p>
         <div className="search-dates">
-          <TimeTemPicker {...props} />
+          <TimePicker {...props} />
         </div>
         <div className="tempe-about">
-          <TempChart {...props} />
+          <ReportChart {...props} name={"Temperature"}/>
         </div>
       </Parallax>
       
