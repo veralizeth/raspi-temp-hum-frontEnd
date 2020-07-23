@@ -23,7 +23,7 @@ const Temperature = (props) =>{
               <TimePicker {...props} />
               <Chart {...props} name={"Temperature"} />
               {/* <ReportChart {...props} name={"Temperature"} /> */}
-              <CurrentValueCard {...props} title={"Current Temperature:"} />
+              <CurrentValueCard {...props} title={"Temperature: "} simbol={"°C"} />
             </div>
             <div className="link">
               <Link
