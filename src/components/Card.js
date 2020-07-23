@@ -37,13 +37,15 @@ const currentValueCard = (props) => {
         <Card.Content>
           <Card.Meta className="title">{displayValue?.value.toFixed(2) || "Loading..."} {props.simbol} </Card.Meta>
           <Card.Header>{props.title}</Card.Header>
+          <br></br>
           {averageValue(props.data) ? (
-            <div className="card-content"> Avg: {averageValue(props.data)} {props.simbol}</div>
+            <div className="card-content"> <strong>Avg:</strong> {averageValue(props.data)} {props.simbol}</div>
           ) : (
             <div></div>
           )}
+          <br></br>
           { MaxValue(props.data)?.value ? (
-            <div className="card-content"> Max: {MaxValue(props.data).value.toFixed(2)} {props.simbol}</div>
+            <div className="card-content"> <strong>Max:</strong> {MaxValue(props.data).value.toFixed(2)} {props.simbol}</div>
           ) : (
             <div></div>
           )}
@@ -52,8 +54,9 @@ const currentValueCard = (props) => {
           ) : (
               <div></div>
           )}
+          <br></br>
           { MinValue(props.data)?.value ? (
-            <div className="card-content"> Min: {MinValue(props.data).value.toFixed(2)} {props.simbol}</div>
+            <div className="card-content"> <strong>Min:</strong> {MinValue(props.data).value.toFixed(2)} {props.simbol}</div>
           ) : (
               <div></div>
             )}

@@ -11,7 +11,7 @@
 }
 
 .time-selector{
-  /* padding-right: 10px; */
+  padding-right: 10px;
   padding-top: 100px;
 }
 
@@ -19,12 +19,14 @@
   border: none !important;
 }
 
+
 .search-dates {
   display: flex;
   margin-top: 50px;
   margin: auto;
   width: 90%;
   padding: 10px;
+  padding-bottom: 200px;
 } 
 .search-btn {
   margin-top: 10px;
