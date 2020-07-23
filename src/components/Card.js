@@ -40,7 +40,7 @@ const currentValueCard = (props) => {
           <Card.Header>{props.title}</Card.Header>
           <br></br>
           {averageValue(props.data) ? (
-            <div className="card-content"> <strong>Avg:</strong> {averageValue(props.data)} {props.simbol} {averageValue(props.data)} {props.simbol}</div>
+            <div className="card-content"> <strong>Avg:</strong> {averageValue(props.data)} {props.simbol}</div>
           ) : (
             <div></div>
           )}
