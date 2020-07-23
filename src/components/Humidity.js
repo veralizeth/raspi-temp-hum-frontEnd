@@ -20,7 +20,12 @@ const Humidity = (props) =>{
               <TimePicker {...props} />
               <Chart {...props} name={"Temperature"} />
               {/* <ReportChart {...props} name={"Humidity"}/> */}
-              <CurrentValueCard {...props} title={"Current humidity"} simbol={"%"}/>
+              <CurrentValueCard 
+                {...props} 
+                image={"http://www.icons101.com/icons/80/Lovely_Weather_2_Icons_by_Custom_Icon_Design/128/Humidity.png"}
+                title={"Current humidity"} 
+                simbol={"%"}
+              />
             </div>
             <div className="link">
               <Link

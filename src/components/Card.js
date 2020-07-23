@@ -29,17 +29,18 @@ const currentValueCard = (props) => {
     const obj = data.find(metric => metric.value === getMinValue);
     return obj
   }
-
+  
   return (
     <div className='card-section'>
       <Card>
-        <Image src='https://cdn.jsdelivr.net/npm/twemoji@11.0.1/2/svg/2600.svg' wrapped ui={false} />
+        <Image src={props.image} wrapped ui={false} />
         <Card.Content>
           <Card.Meta className="title">{displayValue?.value.toFixed(2) || "Loading..."} {props.simbol} </Card.Meta>
+          {/* <Card.Meta className="title">{(displayValue?.value.toFixed(2) * 9 / 5) + 32 || "Loading..."} {props.fahrenheit} </Card.Meta> */}
           <Card.Header>{props.title}</Card.Header>
           <br></br>
           {averageValue(props.data) ? (
-            <div className="card-content"> <strong>Avg:</strong> {averageValue(props.data)} {props.simbol}</div>
+            <div className="card-content"> <strong>Avg:</strong> {averageValue(props.data)} {props.simbol} {averageValue(props.data)} {props.simbol}</div>
           ) : (
             <div></div>
           )}
