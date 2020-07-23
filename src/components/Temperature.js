@@ -1,14 +1,14 @@
 import React from 'react';
+import axios from 'axios';
 import { Parallax, Background } from "react-parallax";
 import ReportChart from './ReportChart';
 import TimePicker from './TimePicker';
+import CurrentValueCard from './Card'
+import Chart from './lineChart'
 import './Temperature.css';
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const Temperature = (props) =>{
-
-  const temperatureArray = props.data;
-  console.log(temperatureArray);
 
   return (
     <div className='tempe-section' id='temperature'>
@@ -21,7 +21,9 @@ const Temperature = (props) =>{
           <div className="tempe-about">
             <div className="search-dates">
               <TimePicker {...props} />
-              <ReportChart {...props} name={"Temperature"} />
+              <Chart {...props} name={"Temperature"} />
+              {/* <ReportChart {...props} name={"Temperature"} /> */}
+              <CurrentValueCard {...props} title={"Current Temperature:"} />
             </div>
             <div className="link">
               <Link

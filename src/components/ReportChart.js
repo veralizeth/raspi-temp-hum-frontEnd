@@ -5,6 +5,8 @@ import './ReportChar.css';
 
 const ReportChart = (props) => {
 
+  console.log(props)
+
   const sliceData = (props) => {
     const humidityArray = props.data
     if (humidityArray.length > 100) {
@@ -26,7 +28,7 @@ const ReportChart = (props) => {
     console.log(ts.toUTCString());
     return ts.toLocaleString();
   });
-  console.log("ydata")
+
 
     return (
       <Plot

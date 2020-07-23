@@ -1,7 +1,8 @@
 import React from 'react';
 import { Parallax, Background } from "react-parallax";
-import ReportChart from './ReportChart';
+import Chart from './lineChart';
 import TimePicker from './TimePicker';
+import CurrentValueCard from './Card'
 import './Humidity.css';
 import { Link, animateScroll as scroll } from "react-scroll";
 
@@ -17,7 +18,9 @@ const Humidity = (props) =>{
           <div className="tempe-about">
             <div className="search-dates">  
               <TimePicker {...props} />
-              <ReportChart {...props} name={"Humidity"}/>
+              <Chart {...props} name={"Temperature"} />
+              {/* <ReportChart {...props} name={"Humidity"}/> */}
+              <CurrentValueCard {...props} title={"Current Humidity:"} />
             </div>
             <div className="link">
               <Link

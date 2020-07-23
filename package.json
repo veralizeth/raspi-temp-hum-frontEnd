@@ -17,6 +17,8 @@
     "react-plotly.js": "^2.4.0",
     "react-scripts": "3.4.1",
     "react-scroll": "^1.8.0",
+    "recharts": "^1.8.5",
+    "semantic-ui-react": "^1.0.0",
     "victory": "^35.0.5",
     "websocket-extensions": "^0.1.4"
   },

@@ -1,0 +1,22 @@
+.image img{
+    width: 60px;
+    height: 60px;
+}
+
+.image {
+  padding: 20px 20px 20px 20px;
+}
+
+.card-section {
+  padding-left: 12px;
+  margin-top: 100px;
+}
+
+.ui{
+  display: flex;
+}
+
+.content{
+  padding-top: 25px;
+}
+
