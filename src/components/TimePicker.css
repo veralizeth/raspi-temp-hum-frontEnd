@@ -1,6 +1,6 @@
 .react-datetime-picker{
   font-family: Montserrat, 'Segoe UI', Tahoma, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   box-shadow: 0 30px 40px 0 rgba(16, 36, 94, 0.2);
   border-radius: 10px !important;
   background-color: #f0faf6;
@@ -11,14 +11,13 @@
 }
 
 .time-selector{
-  padding-right: 10px;
-  padding-top: 80px;
+  /* padding-right: 10px; */
+  padding-top: 100px;
 }
 
 .react-datetime-picker__wrapper {
   border: none !important;
 }
-
 
 .search-dates {
   display: flex;
