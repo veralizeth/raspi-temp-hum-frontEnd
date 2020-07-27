@@ -15,7 +15,7 @@ To execute this project there are three repositories:
 ## Table of Contents
 
 * [Introduction and Technologies](#Introduction-and-Technologies)
-* [React installation](#React)
+* [React installation](#React-installation )
 
 
 ## Introduction and Technologies
@@ -30,9 +30,7 @@ Be able to show the information by minute and using charts.
 
 * Using Axios library to access the custom REST API from Java Spring Boot server and usu react charts to display the information about Temperature and Humidity. 
 
-## Installation
-
-## Available Scripts
+## React-installation
 
 Clone this repository and in the project directory, you can run:
 
