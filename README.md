@@ -16,6 +16,8 @@ To execute this project there are three repositories:
 
 * [Introduction and Technologies](#Introduction-and-Technologies)
 * [React installation](#React-installation )
+* [Axios configurations](#Axios configurations)
+* [React Recharts Library](#React Recharts Library)
 
 
 ## Introduction and Technologies
@@ -30,7 +32,7 @@ Be able to show the information by minute and using charts.
 
 * Using Axios library to access the custom REST API from Java Spring Boot server and usu react charts to display the information about Temperature and Humidity. 
 
-## React-installation
+## React installation
 
 Clone this repository and in the project directory, you can run:
 
@@ -47,5 +49,28 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+## Axios configurations
+
+#### Installation: 
+
+```bash
+$ npm install axios 
+```
+#### Using Axios exmple:
+
+``` react
+const getDevices = (url) => {
+    axios.get(url)
+      .then((response) => {
+        setDeviceList(response.data);
+      })
+      .catch((error) => {
+        console.log(error)
+      });
+  };
+```
+
+## React Charts
 
 
