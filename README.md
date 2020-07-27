@@ -80,4 +80,47 @@ const getDevices = (url) => {
 
 ## React Charts
 
+NPM is the easiest and fastest way to get started using Recharts.
+
+```bash
+ $ npm install recharts
+```
+
+To use react charts the data should be formated like this: 
+
+```json
+[
+{id: 22019, value: 26.899999618530273, timeStamp: "7/23/2020, 4:39:52 PM"},
+{id: 22021, value: 26.899999618530273, timeStamp: "7/23/2020, 4:40:53 PM"},
+{id: 22023, value: 26.899999618530273, timeStamp: "7/23/2020, 4:41:53 PM"} 
+]
+```
+
+React component example: 
+
+```react
+import React, { PureComponent } from 'react';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import './lineChar.css';
+
+const Chart = (props) => {
+
+  const data = props.data;
+
+  return (
+    <LineChart width={700} height={250} data={data}
+      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="timeStamp" />
+      <YAxis type="number" domain={['auto', 'auto']} />
+      <Tooltip />
+      <Legend />
+      {/* <Line type="monotone" dataKey="pv" stroke="#8884d8" /> */}
+      <Line type="monotone" dataKey="value" stroke="#82ca9d" />
+    </LineChart>
+  )
+}
+export default Chart;
+```
+
 
