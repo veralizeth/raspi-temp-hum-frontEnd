@@ -15,7 +15,7 @@ To execute this project there are three repositories:
 ## Table of Contents
 
 * [Introduction and Technologies](#Introduction-and-Technologies)
-* [React](#React)
+* [React installation](#React)
 
 
 ## Introduction and Technologies
@@ -28,18 +28,21 @@ Be able to show the information by minute and using charts.
 
 **The solution**: 
 
-* Using Axios library to access the custom REST API from Java Spring Boot server.
-* Using react charts 
-    
-
+* Using Axios library to access the custom REST API from Java Spring Boot server and usu react charts to display the information about Temperature and Humidity. 
 
 ## Installation
 
 ## Available Scripts
 
-In the project directory, you can run:
+Clone this repository and in the project directory, you can run:
 
-### `yarn start`
+#### `yarn install` or `npm install` 
+
+To install all the depencies and libreries use in this repo. 
+
+Then you can run:
+
+#### `yarn start` or `npm install`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
