@@ -15,9 +15,10 @@ To execute this project there are three repositories:
 ## Table of Contents
 
 * [Introduction and Technologies](#Introduction-and-Technologies)
-* [React installation](#React-installation )
-* [Axios configurations](#Axios configurations)
-* [React Recharts Library](#React Recharts Library)
+* [React installation](#React-installation)
+* [The Catapult Project API](#The-Catapult-Project-API)
+* [Axios configurations](#Axios-configurations)
+* [React Recharts Library](#React-Recharts-Library)
 
 
 ## Introduction and Technologies
@@ -49,6 +50,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+## The Catapult Project API
+
+The API is hosted at http://ec2-3-15-31-145.us-east-2.compute.amazonaws.com:8080/api/ You can find the API documentation and source code hosted here in this repository [Raspi-temp-hum-api](https://github.com/veralizeth/raspi-temp-hum-api/blob/master/README.md#api-endpoints).
+
+You can explore the API with Postman and see how the data is returned. 
 
 ## Axios configurations
 
