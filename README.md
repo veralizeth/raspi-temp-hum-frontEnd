@@ -15,6 +15,7 @@ To execute this project there are three repositories:
 ## Table of Contents
 
 * [Introduction and Technologies](#Introduction-and-Technologies)
+* [Demo video](#Demo)
 * [React installation](#React-installation)
 * [The Catapult Project API](#The-Catapult-Project-API)
 * [Axios configurations](#Axios-configurations)
@@ -33,8 +34,13 @@ Be able to show the information by minute and using charts.
 
 * Using Axios library to access the custom REST API from Java Spring Boot server and usu react charts to display the information about Temperature and Humidity. 
 
-## React installation
+## Demo
 
+Follow the link to see how Catapult works on a high level, here we explain how the web page works and how all the tech stack is integrated.
+
+[Catapult Demo video](https://www.youtube.com/watch?v=DBegmTxu0hs&t=157s)
+
+## React installation
 Clone this repository and in the project directory, you can run:
 
 #### `yarn install` or `npm install` 
@@ -78,7 +84,7 @@ const getDevices = (url) => {
   };
 ```
 
-## React Charts
+## React Recharts Library
 
 NPM is the easiest and fastest way to get started using Recharts.
 
